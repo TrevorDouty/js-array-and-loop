@@ -9,6 +9,17 @@
 // Hint: Utilize the string prototype method charCodeAt and generic method fromCharCode
 
 function letterChecker(str) {
+  for (let i = str; i < str.length; i++) {
+    let str1 = str[i];
+    if () {
+      return `no missing letters`;
+    }
+    else if (str.length < str1) {
+      return str1.fromCharCode()
+    }
+
+
+  }
 
 }
 
@@ -23,7 +34,15 @@ function letterChecker(str) {
 // output: true (because 4+3)
 
 function sumEqualsTarget(arr, target) {
+  for (let i = arr; i < arr.length; i++) {
+    let arr2 = arr[i]
+    if (arr2 + arr2++ == target) {
+
+    }
+  }
+  return true
 }
+
 
 
 // ------------------------------------------

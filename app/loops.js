@@ -4,8 +4,15 @@
 // input: 4
 // output: 24
 // 1*2*3*4 = 24
-
 function factorials(num) {
+  let startNum = 1
+  for (i = 1; i <= num; i++) {
+    startNum *= i
+
+  }
+  console.log(startNum)
+  return startNum
+
 
 }
 
@@ -17,7 +24,13 @@ function factorials(num) {
 // output: 20
 
 function rangeTotal(n1, n2) {
+  let endNumber = 0
+  for (let i = n1; i <= n2; i++) {
+    endNumber += i;
+    console.log(endNumber);
 
+  }
+  return endNumber
 }
 
 // ------------------------------------------
@@ -30,5 +43,15 @@ function rangeTotal(n1, n2) {
 // output: 2
 
 function rangeDivisor(start, end, divisor) {
+  let total = 0
+  for (let i = start; i <= end; i++) {
+    if (i % divisor == 0) {
+      total++
+    }
 
+
+
+
+  }
+  return total
 }

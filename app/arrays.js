@@ -4,7 +4,11 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    let wordOne = arr.shift()
+    arr.push(wordOne);
+    return arr
 }
+
 
 
 // ------------------------------------------
@@ -16,6 +20,15 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    let arr2 = arr.pop();
+
+    return arr2
+
+
+
+
+
+
 }
 
 
@@ -28,6 +41,14 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
+    let arr2 = []
+    arr.forEach(num => {
+        // num *= arr.length;
+        arr2.push(num * arr.length)
+
+    });
+    return arr2
+
 }
 
 
@@ -41,7 +62,15 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
+    console.log(arr.flat())
+    let arr2 = arr.flat(Number.MAX_SAFE_INTEGER);
+    console.log(arr2)
 
+
+
+    let arr3 = []
+    arr3.push(arr2.valueOf())
+    return arr3
 }
 
 
@@ -76,9 +105,26 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
+    let flight = {}
+    for (let i = 0; i < flights.length; i++) {
+        const currentFlight = flights[i]
+        if (currentFlight.to.toUpperCase() == destination.toUpperCase()) {
+            flight = currentFlight
+
+        }
+    }
+
+    let firstClassCost = flight.prices.firstClass;
+    if (firstClass) {
+        return firstClassCost
+    }
+    else {
+        return flight.prices.standard
+    }
+
+
 
 }
-
 
 // ------------------------------------------
 
@@ -98,6 +144,14 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 
 function findById(id) {
 
+    for (let i = 0; i < staff.length; i++) {
+        const currentNum = staff[i];
+        if (currentNum.id == id) {
+            return currentNum
+        }
+
+    }
+    return { error: "No user with that id." }
 }
 
 
@@ -124,4 +178,14 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    for (let i = 0; i < theBand.members.length; i++) {
+        let individual = theBand.members[i];
+        if (individual.name.toUpperCase == name.toUpperCase) {
+
+            return `${individual.name} is in the band and plays the ${individual.instrument}`
+        }
+
+
+
+    }
 }
